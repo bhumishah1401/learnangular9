@@ -8,6 +8,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertComponent } from './product-alert/product-alert.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { RouterModule } from '@angular/router';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -15,14 +16,16 @@ import { RouterModule } from '@angular/router';
     TopBarComponent,
     ProductListComponent,
     ProductAlertComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
       {path: '', component: ProductListComponent},
-      {path: 'products/:productId', component: ProductDetailsComponent}
+      {path: 'products/:productId', component: ProductDetailsComponent},
+      { path: 'cart', component: CartComponent }
     ])
   ],
   providers: [],
